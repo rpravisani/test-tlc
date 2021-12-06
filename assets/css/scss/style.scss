@@ -1,0 +1,17 @@
+/* BASE */
+@import './base/reset';
+@import './base/variables';
+@import './base/typography';
+@import './base/core';
+
+
+/* TEMPLATE */
+.pravisani{
+    font-size: 56;
+    font-weight: 700;
+    color: tomato;
+}
+
+/* HELPERS */
+@import './helpers/helpers';
+

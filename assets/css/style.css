@@ -1,0 +1,812 @@
+/* BASE */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Color Theme Swatches in Hex */
+
+/* Color Theme Swatches in RGBA */
+
+/* Wrap */
+
+/* Media */
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.secondary-font h1,
+.secondary-font h2,
+.secondary-font h3,
+.secondary-font h4,
+.secondary-font h5,
+.secondary-font h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-weight-normal {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.font-weight-bold {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.font-wrap-span {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.site-wrap {
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+.site-wrap__contents {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* TEMPLATE */
+
+:root{
+    --giallo: #e7c700;
+    --grigio: #B3B3B3;
+    --grigio-scuro: #6B767C;	
+    --grigio-chiaro: #EFEFEF;
+    --blu: #165C82;
+    --arancio: #F39D00;
+}
+
+input, select, button, button:focus{
+    outline: none;
+	box-shadow: none !important;
+}
+
+small, .btn{
+    font-size: 0.82em;
+}
+
+h1{
+    font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--blu);
+	margin-bottom: 0.857rem;
+}
+
+h2{
+    font-size: 1.875rem;
+	font-weight: 300;
+	color: var(--grigio-scuro);
+	margin-bottom: 0.857rem;	
+}
+
+
+h3, h4{
+	color: var(--blu);
+	font-weight: 600;
+}
+
+h3{
+	font-size: 1.875rem;
+	margin-bottom: 1.5rem;
+}
+
+h4{
+	font-size: 1.55rem;
+	margin-bottom: 2rem;
+}
+
+h2 strong, h3 strong, h4 strong, p strong{
+	font-weight: 600;
+}
+
+
+p{
+	line-height: 1.45rem;
+	margin-bottom: 1.4rem;
+}
+
+em{
+	font-style: italic;
+}
+
+.tab-pane li{
+	line-height: 2.375rem;
+}
+
+.tab-pane li::before {
+	content: '•';
+	padding-right: 0.7rem;
+	color: var(--giallo);
+	font-size: 1.8rem;
+	vertical-align: -2px;
+}
+
+.btn{
+	border-radius: 1px;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.sfondo-giallo{
+    background-color: var(--giallo);
+} 
+
+.sfondo-grigio{
+    background-color: var(--grigio-scuro);
+} 
+
+.sfondo-grigio-chiaro{
+    background-color: var(--grigio);
+} 
+
+.btn-light2{
+	background-color: #ccc;
+	color: #fff;
+}
+.btn-light2:hover{
+	background-color: #bbb;
+	color: #fff;
+}
+
+.btn-warning{
+	background-color: var(--giallo);
+	transition: all 0.7s;
+}
+.btn-warning:hover{
+	background-color: var(--giallo);
+	opacity: 0.8;
+}
+
+.btn-group-lg > .btn, .btn-lg{
+	padding: 1rem;
+}
+
+.testo-giallo{
+	color: var(--giallo) !important;
+}
+
+.testo-arancio{
+	color: var(--arancio);
+}
+
+.image-div{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/*------------------------------------------- TOP NAV BAR  ---*/
+#top-bar > .container > .row{
+    align-items: center;
+}
+
+#logo img{
+    width: 100%;
+}
+
+.nav-link:focus, .nav-link:hover {
+	color: #0a58ca;
+}
+#main-nav .nav .nav-item a{
+    color: #000;
+    font-size: 0.82em;
+}
+
+#contatti-top{
+    height: 120px;
+}
+
+#contatti-top p{
+    font-size: 1.15em;
+    font-weight: 600;
+	margin-bottom: 0;
+}
+
+/*------------------------------------------- HEADER ---*/
+
+#header {
+	background-image: url("/images/testataLanding.png");
+}
+#bottom {
+	background-image: url("/images/bottomLanding.png");
+}
+
+.hero {
+	padding-bottom: 80px;
+}
+
+.hero-with-image{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/*------------------------------------------- HEADER & FOOTER / TEXT ---*/
+
+.hero-text{
+    font-weight: 600;
+    text-shadow: 2px 4px 0px rgba(0, 0, 0, 0.15);
+    align-self: flex-end;
+}
+
+.hero-text h2{
+    font-size: 2.8rem;
+	font-weight: 600;
+	font-style: normal;
+	margin-bottom: 0;
+}
+
+.hero-text h4{
+    font-size: 1.8rem;
+}
+
+.hero-text h4 strong{
+    color: var(--giallo);
+}
+
+#form-in-hero{
+	height: 575px;
+}
+
+
+/*------------------------------------------- HEADER / MODULO PREVENTIVO / CONTA STEP ---*/
+
+.step-preventivo {
+	text-align: center;
+	color: #fff;
+}
+
+.step-preventivo__numero {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto 6px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	line-height: 38px;
+	font-size: 0.82rem;
+	font-weight: 600;
+}
+
+.step-preventivo--attivo {
+	background-color: #fff;
+	color: var(--blu);
+}
+
+.step-preventivo__label {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.82rem;
+}
+
+
+/*------------------------------------------- HEADER / MODULO PREVENTIVO / MODULO ---*/
+.form-holder .form-content h4{
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.form-holder .form-content .card-text{
+    font-size: 0.82rem;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-content__opzioni input[type='radio']{
+    display: none;
+}
+
+.form-content__opzioni label, .form-content__opzioni__puls{
+    border: 1px solid var(--grigio);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 10px;
+    font-size: .875rem;
+}
+
+.form-content__opzioni label{
+    cursor: pointer;
+}
+
+input.form-content__opzioni__puls{
+    width: 100%;
+    text-align: center;
+}
+
+.form-content__opzioni input[type='radio']:checked + label{
+    background-color: var(--giallo);
+}
+
+.form-content__opzioni select{
+    font-size: 11px;
+	height: 42px;
+}
+
+.form_error{
+	color: var(--bs-red);
+	border-color: var(--bs-red);
+	background-color: #f2dede;
+}
+
+.btn.form-content__step.btn-secondary::after{
+	content: url('/images/right-arrow.svg');
+	position: absolute;
+	right: 2rem;
+}
+
+.btn.form-content__step.btn-light2:before{
+	content: url('/images/right-arrow.svg');
+	position: absolute;
+	left: 2rem;
+	transform: rotate(180deg);
+	margin-top: -4px;
+}
+
+.btn.btn-avanti {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.btn.btn-warning.btn-avanti {
+	color: #fff;
+}
+
+.btn.btn-avanti::after {
+	content: url('/images/right-arrow.svg');
+	margin-left: 1rem;
+	vertical-align: -2px;
+}
+
+.consensi{
+	text-align: left;
+}
+.consensi input{
+	float: left;
+	margin-top: 5px;
+	
+}
+.consensi label{
+	padding-left: 25px;
+	display: block;
+	font-size: 0.68rem;
+	line-height: 1rem;
+}
+
+
+.card.form-content{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transition: all 1s;
+    opacity: 0;
+    width: 100%;
+}
+
+.card.form-content--active{
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+.card.form-content--previous{
+    position: absolute;
+    left: -100%;
+}
+
+/*------------------------------------------- PRESTITI FAI DA TE / TABS ---*/
+ul.nav li{
+	line-height: 2.2rem;
+}
+
+
+.nav-pills .nav-link{
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	background-color: var(--grigio);
+	color: #fff;
+}
+
+.nav-pills .nav-link.active{
+	background-color: var(--giallo);
+	border-bottom: 3px solid #fff;
+	box-shadow: 0 4px var(--giallo);
+}
+
+
+/*------------------------------------------- TASSO FISSO AGEVOLATO ---*/
+
+.items-tasso-fisso{
+	background-color: var(--grigio-chiaro);
+}
+
+.items-tasso-fisso .card{
+	background-color: transparent;
+	border: 0;
+}
+
+.items-tasso-fisso .card .card-body{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.items-tasso-fisso .card .card-body .card-title{
+	font-size: 1.25rem;
+	color: var(--blu);
+	font-weight: 700;
+}
+
+.items-tasso-fisso .card .card-body .card-text{
+	color: var(--grigio-scuro);
+	font-weight: 700;
+}
+
+
+/*------------------------------------------- VANTAGGI ---*/
+
+#vantaggi{
+	margin-bottom: 160px;
+}
+
+.icon-box{
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.icon-box img{
+	height: 60px;
+	margin-bottom: 0.8rem;
+}
+
+.icon-box h4{
+	font-weight: 900;
+	margin-bottom: 0.3rem;
+	color: var(--grigio-scuro);
+}
+
+.icon-box p{
+	padding: 0 2.5rem;
+	color: var(--grigio-scuro); 
+}
+
+
+/*------------------------------------------- BANNER MID-PAGE ---*/
+
+#banner {
+	position: relative;
+}
+#banner .sfondo-giallo h4{
+	font-size: 1.875rem;
+	color: #5e5e5e;
+	margin-bottom: 0.4rem;
+}
+
+#banner .sfondo-giallo p{
+	font-size: 1.25rem;
+	font-weight: 300;
+	line-height: 2rem;
+	color: #5e5e5e;
+	margin-bottom: 0.4rem;
+}
+
+#banner .sfondo-grigio p{
+	margin-bottom: 0.825rem;
+	color: #fff;
+}
+
+
+#banner .sfondo-grigio p.testo-giallo{
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+#banner::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 125px;
+    right: 0px;
+    z-index: 1;
+    background-image: url('/images/gear.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 297px;
+    height: 354px;
+}
+
+
+/*------------------------------------------- FAI DA TE ---*/
+
+#fai-da-te img{
+	max-width: 200px;
+}
+
+#fai-da-te p{
+	font-size: 1.125rem;
+	color: var(--blu);
+}
+
+
+/*------------------------------------------- FAQ ---*/
+
+#faq .card{
+	background-color: var(--grigio-chiaro);
+	border: 0;
+	text-align: center;
+	padding: 1.5rem;
+	color: var(--grigio-scuro);
+	line-height: 1.6rem;
+	min-height: 280px;
+}
+
+#faq .card .card-title{
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background: var(--giallo);
+}
+
+
+/*------------------------------------------- CHI SIAMO ---*/
+#chi-siamo{
+}
+
+#chi-siamo h4{
+	font-weight: 300;
+	font-size: 1.44rem;
+	line-height: 2rem;
+	color: #000;
+}
+
+#chi-siamo p{
+	line-height: 1.5rem;
+}
+
+#chi-siamo .image-div{
+	background-image: url('/images/final-section.jpg');
+}
+
+/*------------------------------------------- banner bottom ---*/
+.call-us p{
+	margin-bottom: 0.825rem;
+	color: #fff;
+}
+
+
+.call-us p.testo-giallo{
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+#banner-bottom a{
+	color: #fff;
+}
+
+
+/*------------------------------------------- footer ---*/
+
+footer{
+	padding-top: 40px;
+}
+
+footer a, footer a:hover{
+	color: #000;
+	text-decoration: underline;
+}
+
+footer a.credit{
+	color: #4e4e4e;
+	text-decoration: none;
+
+}
+
+/* HELPERS */
+
